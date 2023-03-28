@@ -193,6 +193,7 @@ class Domain(Base):
     max_aliases = db.Column(db.Integer, nullable=False, default=-1)
     max_quota_bytes = db.Column(db.BigInteger, nullable=False, default=0)
     signup_enabled = db.Column(db.Boolean, nullable=False, default=False)
+    outgoing_only = db.Column(db.Boolean, default=False)
 
     _dkim_key = None
     _dkim_key_on_disk = None
